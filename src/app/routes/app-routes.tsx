@@ -10,6 +10,9 @@ import { SignTransaction } from '@app/pages/sign-transaction/sign-transaction';
 import { SignIn } from '@app/pages/onboarding/sign-in/sign-in';
 import { ReceiveTokens } from '@app/pages/receive-tokens/receive-tokens';
 import { AddNetwork } from '@app/pages/add-network/add-network';
+import { ConnectLedger } from '@app/pages/onboarding/ledger/connect-ledger/connect-ledger';
+import { ConnectLedgerError } from '@app/pages/onboarding/ledger/connect-ledger-error/connect-ledger-error';
+import { ConnectLedgerSuccess } from '@app/pages/onboarding/ledger/connect-ledger-success/connect-ledger-success';
 import { SetPasswordPage } from '@app/pages/onboarding/set-password/set-password';
 import { SendTokensForm } from '@app/pages/send-tokens/send-tokens';
 import { ViewSecretKey } from '@app/pages/view-secret-key/view-secret-key';
@@ -63,6 +66,9 @@ export function AppRoutes(): JSX.Element | null {
         </Route>
         <Route path={RouteUrls.Onboarding} element={<WelcomePage />} />
         <Route path={RouteUrls.BackUpSecretKey} element={<BackUpSecretKeyPage />} />
+        <Route path={RouteUrls.ConnectLedger} element={<ConnectLedger />} />
+        <Route path={RouteUrls.ConnectLedgerError} element={<ConnectLedgerError />} />
+        <Route path={RouteUrls.ConnectLedgerSuccess} element={<ConnectLedgerSuccess />} />
         <Route path={RouteUrls.RequestDiagnostics} element={<AllowDiagnosticsPage />} />
         <Route path={RouteUrls.SetPassword} element={<SetPasswordPage />} />
         <Route path={RouteUrls.SignIn} element={<SignIn />} />
